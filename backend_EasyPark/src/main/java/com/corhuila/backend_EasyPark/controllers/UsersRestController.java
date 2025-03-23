@@ -15,11 +15,13 @@ public class UsersRestController {
     UsersService usersService;
 
     @PostMapping("/addUser")
+    // @CrossOrigin(origins = {"http://localhost:4200"})
     public Users addUser(@RequestBody Users user){
         return usersService.addUser(user);
     }
 
     @PostMapping("/loginUser")
+    // @CrossOrigin(origins = {"http://localhost:4200"})
     public Boolean loginUser(@RequestBody LoginRequest loginRequest){
         return usersService.loginUser(loginRequest);
     }
